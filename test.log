@@ -1,0 +1,23 @@
+goroutine 1 [running]:
+main.readgoroutines()
+        /Users/oguzhan/go/src/gosay/main.go:44 +0x6d
+main.main()
+        /Users/oguzhan/go/src/gosay/main.go:17 +0x55
+
+goroutine 4 [syscall]:
+os/signal.signal_recv(0x0)
+        /usr/local/go/src/runtime/sigqueue.go:139 +0x9f
+os/signal.loop()
+        /usr/local/go/src/os/signal/signal_unix.go:23 +0x22
+created by os/signal.init.0
+        /usr/local/go/src/os/signal/signal_unix.go:29 +0x41
+
+goroutine 5 [sleep]:
+runtime.goparkunlock(...)
+        /usr/local/go/src/runtime/proc.go:307
+time.Sleep(0x77359400)
+        /usr/local/go/src/runtime/time.go:105 +0x159
+main.gogogo()
+        /Users/oguzhan/go/src/gosay/main.go:28 +0x2a
+created by main.main
+        /Users/oguzhan/go/src/gosay/main.go:14 +0x42
