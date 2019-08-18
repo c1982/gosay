@@ -57,7 +57,7 @@ func Parse1(stacktrace string) error {
 
 func parseGoRoutineLine(goroutineline string) (id string, status string, err error) {
 
-	r, _ := regexp.Compile(`^goroutine\W+(\d+)\W+\[(.+)\]`)
+	r, _ := regexp.Compile(`^goroutine\W+(\d+)\W+\[(.+)\]\:$`)
 
 	groups := r.FindStringSubmatch(goroutineline)
 	if len(groups) != 3 {
